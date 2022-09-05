@@ -1,0 +1,19 @@
+.cabecalho {
+    background-color: pink;
+}
+
+.forca {
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+    background: blue;
+    box-sizing: border-box;
+}
+
+#imagem-forca {
+    width: 200px;
+}
+
+.rodape {
+    background-color: green;
+}
