@@ -6,39 +6,79 @@
         <title>Jogo da Forca</title>
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
         <script src="script.js"></script>
 
     </head>
     <body>
         <header class="cabecalho">
-            <p>Jogo da Forca</p>
+            <img src="img/logoAlura.png" alt="Logo Alura" class="logo">
         </header>
 
         <main>
-            <section class="forca">
-                <div>
-                    <p>Imagem da forca fica aqui!</p>
-                    <img src="img/ganhou.png" id="imagem-forca" onmouseup="mudaImagem();">  
+            <section class="sessao-forca">
+                <div class="forca">
+                    <img src="img/forca1.png" id="imagem-forca" onmouseup="mudaImagem();">  
                 </div>
-                
             </section>
 
             <section class="palavra-jogo">
-                <p>linhas com a palavra a ser decifrada aqui!</p>
+                <p>Jogo da Forca</p>
             </section>
 
-            <section class="teclado">
-                <p>Teclado aqui!</p>
+            <section class="sessao-teclado">
+                <div class="teclado">
+                    <div class="teclado-linha1">
+                        <button>Q</button>
+                        <button>W</button>
+                        <button>E</button>
+                        <button>R</button>
+                        <button>T</button>
+                        <button>Y</button>
+                        <button>U</button>
+                        <button>I</button>
+                        <button>O</button>
+                        <button>P</button>    
+                    </div> 
+                    <div class="teclado-linha2">
+                        <button>A</button>
+                        <button>S</button>
+                        <button>D</button>
+                        <button>F</button>
+                        <button>H</button>
+                        <button>J</button>
+                        <button>K</button>
+                        <button>L</button>
+                        <button>Ç</button>
+                    </div>
+                    <div class="teclado-linha3">
+                        <button>Z</button>
+                        <button>X</button>
+                        <button>C</button>
+                        <button>V</button>
+                        <button>B</button>
+                        <button>N</button>
+                        <button>M</button>
+                    </div>   
+                </div> 
             </section>
 
             <section class="botoes">
-                <p>botoes ficam aqui!</p>
+                <button>Novo Jogo</button>
+                <button>Adicionar Palavra</button>
+                <button>Desistir</button>
             </section>
-
         </main>
 
         <footer class="rodape">
-            <p>Desenvolvido por Kariny</p>
+            <div class="imagem-rodape">
+                <a href="https://www.linkedin.com/in/anakariny/" target="_blank"><img src="img/linkedin-logo.png"></a>
+                <a href="https://github.com/akariny" target="_blank"><img src="img/github-logo.png"></a>    
+            </div>
+            <p>Desenvolvido por: Ana Kariny &copy; 2022</p>
+            <p>Oracle Next Education T3 | Alura </p>
         </footer>
     </body>
 </html>
