@@ -132,6 +132,22 @@ body {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .rodape {
+        flex-direction: column;
+    }
+
+    .rodape p {
+        padding: 2px 0;
+    }
+
+    .imagem-rodape {
+        text-align: center;
+        padding: 0;
+        margin: 3px 0;
+    }
+}
+
 @media screen and (max-width: 380px) {
     #imagem-forca {
         width: 100%;
