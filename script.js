@@ -23,7 +23,6 @@ function clicaLetra(e) {
         console.log('clicou ' + e);
         el.style.backgroundColor = 'red';
         el.style.color = 'white';
-        el.disabled = true;
-    
+        el.disabled = true;   
 }
 
