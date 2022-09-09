@@ -41,8 +41,27 @@ body {
     height: 40px;
 }
 
-.palavra-jogo p {
+.palavra-jogo div p {
     font-size: 2em;
+}
+
+#palavra-secreta-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    visibility: hidden;
+    
+}
+
+.palavra-secreta-letra { 
+    margin: 0 3px 0 3px;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+}
+
+#sessao-teclado {
+    display: none;
 }
 
 .teclado {
@@ -67,14 +86,14 @@ body {
 }
 
 .botoes {
-     /*background: brown;*/
+    /*background: brown;*/
     text-align: center;
 }
 
 .botoes button {
     font-family: 'Indie Flower', cursive;
     font-size: 18px;
-    margin: 0 5px;
+    margin: 10px 5px;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -162,6 +181,10 @@ body {
         font-size: 20px;
     }
 
+    #palavra-secreta-div {
+        font-size: 20px;
+    }
+
     .sessao-teclado {
         width: 100%;
     }
@@ -178,6 +201,7 @@ body {
     .botoes {
         display: flex;
         flex-direction: column;
+        margin-top: 25px;
     }
     .botoes button {
         font-size: 10px;
@@ -199,9 +223,9 @@ body {
     }
 }
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 280px) {
     #imagem-forca {
-        width: 70%;
+        width: 80%;
         margin-bottom: 10px;
     }
 
@@ -210,7 +234,11 @@ body {
     }
 
     .palavra-jogo p {
-        font-size: 10px;
+        font-size: 20px;
+    }
+
+    #palavra-secreta-div {
+        font-size: 15px;
     }
 
     .sessao-teclado {
@@ -236,6 +264,7 @@ body {
     .botoes {
         display: flex;
         flex-direction: column;
+        margin-top: 25px;
     }
     .botoes button {
         font-size: 8px;
