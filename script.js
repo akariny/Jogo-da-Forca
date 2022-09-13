@@ -1,15 +1,78 @@
-let listaPalavras = ["GATO", "CACHORRO", "CAVALO", "TATU", "GAIVOTA", "PAVÃO", "MACACO"];
+let listaPalavras = ["GATO", "CACHORRO", "CAVALO", "TATU", "GAIVOTA", "PAVAO", "MACACO", "RATO", "PAPAGAIO", "JAVALI", "RINOCERONTE", "FALCAO", "MOSCA"];
 let palavraSecreta  = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
-let palavraOculta = Array.from(palavraSecreta);
+let palavraOculta = [];
 
-let listaDinamica = [];
 const letrasCorretas = [];
 const letrasErradas = [];
+
 let tentativas = 6;
 
 let teclado = document.getElementsByClassName('botao-teclado');
 
-//função para mudar a imagem da forca conforme for errando as letras
+function iniciaJogo() {
+    document.getElementById("div-desaparece").style.display = 'none';
+    document.getElementById("sessao-teclado").style.display = 'block';
+    document.getElementById("palavra-secreta-div").style.visibility = 'visible';
+    
+    console.log("A Palavra é " + palavraSecreta);
+    montaPalavra();
+}
+
+function desisteJogo() {
+    
+    let popup = document.getElementById('img').src = 'img/perdeu.png';
+    let mensagem = document.getElementById('mensagem');
+    mensagem.textContent = "Que pena, você perdeu :C";
+    mostraPopup();
+}
+
+function novoJogo() {
+    location.reload(true); 
+}
+
+function montaPalavra() {
+    let espacoPalavra = document.getElementById("palavra-secreta-div");
+    espacoPalavra.innerHTML = "";
+
+    for(i = 0; i < palavraSecreta.length; i++) {
+        if(palavraOculta[i] == undefined) {
+            palavraOculta[i] = "&nbsp;"
+            espacoPalavra.innerHTML = espacoPalavra.innerHTML + "<div class='palavra-secreta-letra'>" + palavraOculta[i] + "</div>";
+        } else {
+            espacoPalavra.innerHTML = espacoPalavra.innerHTML + "<div class='palavra-secreta-letra'>" + palavraOculta[i] + "</div>";
+        }
+    } 
+}
+
+function mostraPalavra(letra) {
+    const posicao = palavraSecreta.indexOf(letra);
+
+    if (posicao < 0) {
+        tentativas--;
+    } else {
+        for(i = 0; i < palavraSecreta.length; i++) {
+            if(palavraSecreta[i] == letra) {
+                palavraOculta[i] = letra;
+            }
+        }
+    }
+
+    let vitoria = true;
+    for(i = 0; i < palavraSecreta.length; i++) {
+        if(palavraSecreta[i] != palavraOculta[i]) {
+            vitoria = false;
+        }
+    }
+
+    if(vitoria){
+        mostraPopup();
+    }
+
+    if(tentativas == 0) {
+        desisteJogo();
+    }
+}
+
 function mudaImagem() {
     let imagem = ["img/forca1.png", "img/forca2.png", "img/forca3.png", "img/forca4.png", "img/forca5.png", "img/forca6.png"];
     switch(tentativas) {
@@ -30,100 +93,42 @@ function mudaImagem() {
     }
 }
 
-//monta a palavra com os traços na tela
-function montaPalavra() {
-    let espacoPalavra = document.getElementById("palavra-secreta-div");
+function mostraPopup() {
+    let popup = document.getElementById('popup');
 
-    for(i = 0; i < palavraSecreta.length; i++) {
-        palavraOculta[i] = "&nbsp;";
-        espacoPalavra.innerHTML = espacoPalavra.innerHTML + "<div class='palavra-secreta-letra'>" + palavraOculta[i] + "</div>";
-    };
+    popup.style.display = 'block';
 }
 
-function mostraPalavra(letra) {
-    
-    if (palavraSecreta.includes(letra) == true) {
-        for(i = 0; i < numLetras; i++){
-            if (palavraSecreta[i] == key ){
-            palavraOculta[i] = key
-        }
+function verificaLetra(e) {
+    let clica = document.getElementById(e);
 
-}
-
-//botão novo jogo
-function iniciaJogo() {
-    document.getElementById("div-desaparece").style.display = 'none';
-    document.getElementById("sessao-teclado").style.display = 'block';
-    document.getElementById("palavra-secreta-div").style.visibility = 'visible';
-    
-    console.log("a palavra é " + palavraSecreta);
-    montaPalavra();
-}
-
-//botao desistir 
-function desisteJogo() {
-    //zerar o numerode chances e dar game over 
-    
-    //alert("Você voltará para o menu!");
-    //document.getElementById("div-desaparece").style.display = 'block';
-    //document.getElementById("sessao-teclado").style.display = 'none';
-
-    location.reload(true);   
-}
-
-//interações com o teclado
-function teclaLetra(e) {
-    const tecla = document.getElementById(e.key.toUpperCase());
-    
-    if(letrasErradas.includes(e.key.toUpperCase())) {
-        alert("você já escolheu esta letra");
-    } else {
-        if(palavraSecreta.includes(e.key.toUpperCase())) {
-        letrasCorretas.push(e.key.toUpperCase());
-        tecla.style.backgroundColor = 'green';
-        tecla.style.color = 'white';
-        tecla.setAttribute("disabled", "disabled");
-        //desavitar keypress
+    if(tentativas > 0) {
+        if(letrasErradas.includes(e)) {
+            alert("você já escolheu esta letra");
+            clica.removeAttribute('onclick');
         } else {
-            letrasErradas.push(e.key.toUpperCase());
-            tecla.style.backgroundColor = 'red';
-            tecla.style.color = 'white';
-            mudaImagem();
-            tentativas--;
+            if(palavraSecreta.includes(e)) {
+            letrasCorretas.push(e);
+            clica.style.backgroundColor = 'green';
+            clica.style.color = 'white';
+            clica.removeAttribute('onclick');
+            } else {
+                letrasErradas.push(e);
+                clica.style.backgroundColor = 'red';
+                clica.style.color = 'white';
+                clica.removeAttribute('onclick');
+                mudaImagem();
             }
-    } 
+        }
+    }  
 }
 
 function clicaLetra(e) {
-        let clica = document.getElementById(e);
-        console.log('clicou ' + e);  
+    console.log('clicou ' + e); 
 
-            if(letrasErradas.includes(e)) {
-                alert("você já escolheu esta letra");
-            } else {
-                if(palavraSecreta.includes(e)) {
-                letrasCorretas.push(e);
-                clica.style.backgroundColor = 'green';
-                clica.style.color = 'white';
-                clica.removeAttribute('onclick');
-                } else {
-                    letrasErradas.push(e);
-                    clica.style.backgroundColor = 'red';
-                    clica.style.color = 'white';
-                    mudaImagem();
-                    tentativas--;
-                    clica.removeAttribute('onclick');
-                    }
-
-            //mostraPalavra();
-            
-            if(tentativas == 0) {
-                alert("você perdeu :C");
-            }
-        }
-
-        
+    verificaLetra(e);
+    mostraPalavra(e);
+    montaPalavra();
 }
-    }}
+
 teclado.onclick = clicaLetra;
-document.onkeydown = teclaLetra ;
