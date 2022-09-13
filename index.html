@@ -9,8 +9,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-        <script src="script2.js"></script>
-
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     <body>
         <header class="cabecalho">
@@ -20,21 +20,15 @@
         <main>
             <section class="sessao-forca">
                 <div class="forca">
-                    <img src="img/forca.png" id="imagem-forca" onmouseup="mudaImagem();">  
+                    <img src="img/forca.png" id="imagem-forca">  
                 </div>
             </section>
 
             <section class="palavra-jogo">
                 <div id="div-desaparece">
-                    <p>Jogo da Forca</p> <!--aqui deve ser substituido pela palavra secreta-->
+                    <p>Jogo da Forca</p>
                 </div>
-                <div id="palavra-secreta-div">
-                    <!--<div class="palavra-secreta-letra">A</div>
-                    <div class="palavra-secreta-letra">A</div>
-                    <div class="palavra-secreta-letra">A</div>
-                    <div class="palavra-secreta-letra">A</div>-->
-                </div>
-                
+                <div id="palavra-secreta-div"></div>
             </section>
 
             <section id="sessao-teclado">
@@ -76,10 +70,16 @@
             </section>
 
             <section class="botoes">
-                <button onclick="iniciaJogo()">Novo Jogo</button>
+                <button onclick="iniciaJogo()">Iniciar</button>
                 <button>Adicionar Palavra</button>
                 <button onclick="desisteJogo()">Desistir</button>
             </section>
+
+            <div id="popup">
+                <img id="img" src="img/ganhou.png">
+                <p id="mensagem">Parabéns! Você ganhou!</p>
+                <button onclick="novoJogo()">Novo Jogo</button>
+            </div>
         </main>
 
         <footer class="rodape">
