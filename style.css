@@ -105,23 +105,30 @@ body {
 
 #popup {
     width: 30%;
-    height: 40%;
+    height: 50%;
     position: absolute;
     top: 20%;
     left: 35%;
     right: 50%;
     text-align: center;
     border-radius: 15px;
-    padding: 10px;
-
+    
     box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
 
+    display: flex;
+    flex-direction: column;
+
     display: none;
 }
 
-#popup img {
+#popup div {
+    margin: auto 0;
+    padding: 5px;
+}
+
+#popup div img {
     width: 40%;
 }
 
@@ -187,12 +194,11 @@ body {
     }
 
     #popup {
-        width: 60%;
-        height: 220px;
-        position: absolute;
+        width: 50%;
+        height: 60%;
         top: 20%;
-        left: 15%;
-        right: 15%;
+        left: 25%;
+        right: 20%;
     }
 
     #popup p, #popup button {
@@ -203,8 +209,7 @@ body {
 @media screen and (max-width: 480px) {
     #popup {
         width: 60%;
-        height: 36%;
-        position: absolute;
+        height: 50%;
         top: 20%;
         left: 15%;
         right: 15%;
@@ -276,8 +281,7 @@ body {
 
     #popup {
         width: 60%;
-        height: 40%;
-        position: absolute;
+        height: 43%;
         top: 20%;
         left: 20%;
         right: 20%;
@@ -352,8 +356,7 @@ body {
 
     #popup {
         width: 60%;
-        height: 35%;
-        position: absolute;
+        height: 40%;
         top: 20%;
         left: 15%;
         right: 15%;
