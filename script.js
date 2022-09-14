@@ -96,7 +96,7 @@ function mudaImagem() {
 function mostraPopup() {
     let popup = document.getElementById('popup');
 
-    popup.style.display = 'block';
+    popup.style.display = 'flex';
 }
 
 function verificaLetra(e) {
