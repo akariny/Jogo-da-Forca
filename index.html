@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <title>Jogo da Forca</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jogo da Forca</title>
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+        <script src="palavras.js"></script>
         <script src="script.js"></script>
     </head>
     <body>
@@ -71,7 +72,7 @@
 
             <section class="botoes">
                 <button onclick="iniciaJogo()">Iniciar</button>
-                <button>Adicionar Palavra</button>
+                <button onclick="mostraPopupAddPalavra()">Adicionar Palavra</button>
                 <button onclick="desisteJogo()">Desistir</button>
             </section>
 
@@ -80,6 +81,15 @@
                     <img id="img" src="img/ganhou.png">
                     <p id="mensagem">Parabéns! Você ganhou!</p>
                     <button onclick="novoJogo()">Novo Jogo</button>    
+                </div>
+            </div>
+
+            <div id="popupAddPalavra">
+                <div>
+                    <img src="img/addPalavra.png">
+                    <p>Com qual palavra você que jogar?</p>
+                    <input id="input" type="text">
+                    <button onclick="adicionaPalavra()">OK</button>
                 </div>
             </div>
         </main>
@@ -91,6 +101,6 @@
             </div>
             <p>Desenvolvido por: Ana Kariny &copy; 2022</p>
             <p>Oracle Next Education T3 | Alura </p>
-        </footer>
+        </footer>  
     </body>
 </html>
