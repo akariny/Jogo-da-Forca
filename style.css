@@ -9,7 +9,6 @@ body {
     width: 100%;
     height: 30px;
     padding: 5px 0;
-    /*background: purple;*/
 }
 
 .logo {
@@ -20,7 +19,6 @@ body {
 .sessao-forca {
     width: 100%;
     height: 100%;
-    /*background: blue;*/
     box-sizing: border-box;
 }
 
@@ -36,7 +34,6 @@ body {
 }
 
 .palavra-jogo {
-    /*background: red;*/
     text-align: center;
     height: 40px;
 }
@@ -64,7 +61,6 @@ body {
 }
 
 .teclado {
-    /*background: burlywood;*/
     width: 50%;
     margin: 10px auto;
     text-align: center;
@@ -85,7 +81,6 @@ body {
 }
 
 .botoes {
-    /*background: brown;*/
     text-align: center;
 }
 
@@ -103,7 +98,7 @@ body {
     cursor: pointer;
 }
 
-#popup {
+#popup, #popupAddPalavra {
     width: 30%;
     height: 50%;
     position: absolute;
@@ -128,16 +123,16 @@ body {
     padding: 5px;
 }
 
-#popup div img {
+#popup div img , #popupAddPalavra div img{
     width: 40%;
 }
 
-#popup p {
+#popup p, #popupAddPalavra p {
     font-size: 20px;
     font-weight: bold;
 }
 
-#popup button {
+#popup button, #popupAddPalavra button {
     font-family: 'Indie Flower', cursive;
     font-size: 18px;
     margin-top: 10px;
@@ -146,12 +141,23 @@ body {
     border-radius: 5px;
 }
 
+#popupAddPalavra div {
+    margin: auto 0;
+}
+
+#popupAddPalavra div input {
+    width: 90%;
+    height: 25px;
+    margin-top: 10px;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+}
+
 .rodape {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
     justify-content: center;
-    /* background: green;*/
 }
 
 .rodape p {
@@ -181,6 +187,10 @@ body {
         width: 100%;
     }
 
+    #popupAddPalavra {
+        width: 40%;
+        height: 62%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -193,7 +203,7 @@ body {
         width: 100%;
     }
 
-    #popup {
+    #popup, #popupAddPalavra {
         width: 50%;
         height: 60%;
         top: 20%;
@@ -215,12 +225,20 @@ body {
         right: 15%;
     }
 
-    #popup img {
+    #popup img, #popupAddPalavra img {
         width: 30%;
     }
 
-    #popup p, #popup button {
+    #popup p, #popup button, #popupAddPalavra p, #popupAddPalavra button {
         font-size: 15px;
+    }
+
+    #popupAddPalavra {
+        width: 70%;
+        height: 60%;
+        top: 20%;
+        left: 10%;
+        right: 15%;
     }
 
     .rodape {
@@ -287,8 +305,16 @@ body {
         right: 20%;
     }
 
-    #popup p, #popup button {
+    #popup p, #popup button, #popupAddPalavra p, #popupAddPalavra button {
         font-size: 15px;
+    }
+
+    #popupAddPalavra {
+        width: 70%;
+        height: 60%;
+        top: 20%;
+        left: 15%;
+        right: 20%;
     }
 
     .rodape {
@@ -354,7 +380,7 @@ body {
         margin: 5px 20px;
     }
 
-    #popup {
+    #popup{
         width: 60%;
         height: 40%;
         top: 20%;
@@ -362,8 +388,15 @@ body {
         right: 15%;
     }
 
-    #popup p, #popup button {
+    #popup p, #popup button, #popupAddPalavra p, #popupAddPalavra button {
         font-size: 15px;
+    }
+
+    #popupAddPalavra {
+        width: 80%;
+        top: 20%;
+        left: 10%;
+        right: 15%;
     }
 
     .rodape {
