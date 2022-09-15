@@ -93,7 +93,7 @@ body {
     border-radius: 5px;
 }
 
-.botoes button:hover, #popup button:hover {
+.botoes button:hover, #popup button:hover, #popupAddPalavra button:hover {
     font-weight: bold;
     cursor: pointer;
 }
