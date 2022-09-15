@@ -1,4 +1,3 @@
-let listaPalavras = ["GATO", "CACHORRO", "CAVALO", "TATU", "GAIVOTA", "PAVAO", "MACACO", "RATO", "PAPAGAIO", "JAVALI", "RINOCERONTE", "FALCAO", "MOSCA"];
 let palavraSecreta  = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
 let palavraOculta = [];
 
@@ -14,12 +13,11 @@ function iniciaJogo() {
     document.getElementById("sessao-teclado").style.display = 'block';
     document.getElementById("palavra-secreta-div").style.visibility = 'visible';
     
-    console.log("A Palavra é " + palavraSecreta);
+    console.log(palavraSecreta);
     montaPalavra();
 }
 
 function desisteJogo() {
-    
     let popup = document.getElementById('img').src = 'img/perdeu.png';
     let mensagem = document.getElementById('mensagem');
     mensagem.textContent = "Que pena, você perdeu :C";
@@ -73,6 +71,15 @@ function mostraPalavra(letra) {
     }
 }
 
+function adicionaPalavra() {
+    let input = document.getElementById('input');
+    let palavraAdd = input.value.toUpperCase();
+    listaPalavras.push(palavraAdd);
+    palavraSecreta = palavraAdd;
+    let popupAddPalavra = document.getElementById('popupAddPalavra').style.display = 'none';
+    iniciaJogo();   
+}
+
 function mudaImagem() {
     let imagem = ["img/forca1.png", "img/forca2.png", "img/forca3.png", "img/forca4.png", "img/forca5.png", "img/forca6.png"];
     switch(tentativas) {
@@ -95,8 +102,12 @@ function mudaImagem() {
 
 function mostraPopup() {
     let popup = document.getElementById('popup');
-
     popup.style.display = 'flex';
+}
+
+function mostraPopupAddPalavra() {
+    let popupAddPalavra = document.getElementById('popupAddPalavra');
+    popupAddPalavra.style.display = 'flex';
 }
 
 function verificaLetra(e) {
@@ -124,8 +135,6 @@ function verificaLetra(e) {
 }
 
 function clicaLetra(e) {
-    console.log('clicou ' + e); 
-
     verificaLetra(e);
     mostraPalavra(e);
     montaPalavra();
