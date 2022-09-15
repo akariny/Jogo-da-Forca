@@ -13,6 +13,10 @@ let listaPalavras = [
     "FALCAO", 
     "MOSCA",
     "GUEPARDO",
+    "ELEFANTE",
+    "GIRAFA",
+    "PERNILONGO",
+    "ZEBRA",
 
     "ADVOGADO",
     "ENFERMEIRA",
@@ -26,6 +30,8 @@ let listaPalavras = [
     "REDATOR",
     "ATENDENTE",
     "AGRICULTOR",
+    "DESIGNER",
+    "PORTEIRO",
 
     "PIANO",
     "TECLADO",
@@ -60,6 +66,9 @@ let listaPalavras = [
     "AIRFRAYER",
     "CELULAR",
     "SMARTPHONE",
+    "FOTOGRAFIA",
+    "GARFO",
+    "CHINELO",
 
     "AZULEJO",
     "BLITZ",
@@ -83,6 +92,10 @@ let listaPalavras = [
     "CATETE",
     "GOIAS",
     "PORTUGAL",
+    "FINLANDIA",
+    "GROELANDIA",
+    "SUIÇA",
+    "ESPANHA",
     
     "VASCO",
     "FLAMENGO",
@@ -108,4 +121,10 @@ let listaPalavras = [
     "JUSTIÇA",
     "PREÇO",
     "PREGUIÇA",
+
+    "INSTAGRAM",
+    "FACEBOOK",
+    "WHATSAPP",
+    "GOOGLE",
+    "WINDOWS",
 ];
