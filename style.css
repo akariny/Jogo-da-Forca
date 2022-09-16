@@ -177,6 +177,10 @@ body {
     padding: 2px 0;
 }
 
+.badge {
+    height: 20px;
+}
+
 @media screen and (max-width: 780px) {
     #imagem-forca {
         width: 50%;
@@ -254,6 +258,11 @@ body {
         padding: 0;
         margin: 3px 0;
     }
+
+    .badge {
+        width: 20px;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -329,6 +338,11 @@ body {
         text-align: center;
         padding: 0;
         margin: 3px 0;
+    }
+
+    .badge {
+        width: 20px;
+        margin: 0 auto;
     }
 }
 
@@ -411,5 +425,10 @@ body {
         text-align: center;
         padding: 0;
         margin: 3px 0;
+    }
+
+    .badge {
+        width: 20px;
+        margin: 0 auto;
     }
 }
