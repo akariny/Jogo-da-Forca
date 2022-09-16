@@ -13,7 +13,6 @@ function iniciaJogo() {
     document.getElementById("sessao-teclado").style.display = 'block';
     document.getElementById("palavra-secreta-div").style.visibility = 'visible';
     
-    console.log(palavraSecreta);
     montaPalavra();
 }
 
@@ -34,7 +33,7 @@ function montaPalavra() {
 
     for(i = 0; i < palavraSecreta.length; i++) {
         if(palavraOculta[i] == undefined) {
-            palavraOculta[i] = "&nbsp;"
+            palavraOculta[i] = "&nbsp;&nbsp;&nbsp;"
             espacoPalavra.innerHTML = espacoPalavra.innerHTML + "<div class='palavra-secreta-letra'>" + palavraOculta[i] + "</div>";
         } else {
             espacoPalavra.innerHTML = espacoPalavra.innerHTML + "<div class='palavra-secreta-letra'>" + palavraOculta[i] + "</div>";
@@ -108,6 +107,11 @@ function mostraPopup() {
 function mostraPopupAddPalavra() {
     let popupAddPalavra = document.getElementById('popupAddPalavra');
     popupAddPalavra.style.display = 'flex';
+}
+
+function fechaPopupAddPalavra() {
+    let popupAddPalavra = document.getElementById('popupAddPalavra');
+    popupAddPalavra.style.display = 'none'
 }
 
 function verificaLetra(e) {
