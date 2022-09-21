@@ -1,5 +1,7 @@
 let palavraSecreta  = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
 let palavraOculta = [];
+let palavraJogo = palavraSecreta[0];
+let palavraDica = palavraSecreta[1];
 
 const letrasCorretas = [];
 const letrasErradas = [];
@@ -9,6 +11,7 @@ let tentativas = 6;
 let teclado = document.getElementsByClassName('botao-teclado');
 
 function iniciaJogo() {
+    document.getElementById("dica").style.visibility = 'visible';
     document.getElementById("div-desaparece").style.display = 'none';
     document.getElementById("sessao-teclado").style.display = 'block';
     document.getElementById("palavra-secreta-div").style.visibility = 'visible';
@@ -28,10 +31,13 @@ function novoJogo() {
 }
 
 function montaPalavra() {
+    let espacoDica = document.getElementById("dica");
+    espacoDica.innerHTML = palavraDica;
+
     let espacoPalavra = document.getElementById("palavra-secreta-div");
     espacoPalavra.innerHTML = "";
 
-    for(i = 0; i < palavraSecreta.length; i++) {
+    for(i = 0; i < palavraJogo.length; i++) {
         if(palavraOculta[i] == undefined) {
             palavraOculta[i] = "&nbsp;&nbsp;&nbsp;"
             espacoPalavra.innerHTML = espacoPalavra.innerHTML + "<div class='palavra-secreta-letra'>" + palavraOculta[i] + "</div>";
@@ -42,21 +48,21 @@ function montaPalavra() {
 }
 
 function mostraPalavra(letra) {
-    const posicao = palavraSecreta.indexOf(letra);
+    const posicao = palavraJogo.indexOf(letra);
 
     if (posicao < 0) {
         tentativas--;
     } else {
-        for(i = 0; i < palavraSecreta.length; i++) {
-            if(palavraSecreta[i] == letra) {
+        for(i = 0; i < palavraJogo.length; i++) {
+            if(palavraJogo[i] == letra) {
                 palavraOculta[i] = letra;
             }
         }
     }
 
     let vitoria = true;
-    for(i = 0; i < palavraSecreta.length; i++) {
-        if(palavraSecreta[i] != palavraOculta[i]) {
+    for(i = 0; i < palavraJogo.length; i++) {
+        if(palavraJogo[i] != palavraOculta[i]) {
             vitoria = false;
         }
     }
@@ -71,10 +77,17 @@ function mostraPalavra(letra) {
 }
 
 function adicionaPalavra() {
-    let input = document.getElementById('input');
-    let palavraAdd = input.value.toUpperCase();
-    listaPalavras.push(palavraAdd);
-    palavraSecreta = palavraAdd;
+    let inputPalavra = document.getElementById('inputPalavra');
+    let inputDica = document.getElementById('inputDica');
+
+    let palavraAdd = inputPalavra.value.toUpperCase();
+    let dicaAdd = inputDica.value.toUpperCase();
+
+    listaPalavras.push([palavraAdd , dicaAdd]);
+    
+    palavraJogo = palavraAdd;
+    palavraDica = dicaAdd;
+
     let popupAddPalavra = document.getElementById('popupAddPalavra').style.display = 'none';
     iniciaJogo();   
 }
@@ -118,11 +131,7 @@ function verificaLetra(e) {
     let clica = document.getElementById(e);
 
     if(tentativas > 0) {
-        if(letrasErradas.includes(e)) {
-            alert("você já escolheu esta letra");
-            clica.removeAttribute('onclick');
-        } else {
-            if(palavraSecreta.includes(e)) {
+            if(palavraJogo.includes(e)) {
             letrasCorretas.push(e);
             clica.style.backgroundColor = 'green';
             clica.style.color = 'white';
@@ -136,7 +145,6 @@ function verificaLetra(e) {
             }
         }
     }  
-}
 
 function clicaLetra(e) {
     verificaLetra(e);
