@@ -60,6 +60,10 @@ let listaPalavras = [
     ["JUDO", "ESPORTE"],
     ["HANDEBOL", "ESPORTE"],
     ["TENIS", "ESPORTE"],
+    ["CICLISMO", "ESPORTE"],
+    ["ATLETISMO", "ESPORTE"],
+    ["NATAÇAO", "ESPORTE"],
+    ["XADREZ", "ESPORTE"],
 
     ["COMPUTADOR", "OBJETO"],
     ["MESA", "OBJETO"],
@@ -111,6 +115,10 @@ let listaPalavras = [
     ["CHAPECOENSE", "TIME"],
     ["CHELSEA", "TIME"],
     ["BARCELONA", "TIME"],
+    ["CHELSEA", "TIME"],
+    ["LIVERPOOL", "TIME"],
+    ["ARSENAL", "TIME"],
+    ["MILAN", "TIME"],
 
     ["AÇUCAR", "COMIDA"],
     ["AÇAFRAO", "COMIDA"],
@@ -135,6 +143,10 @@ let listaPalavras = [
     ["MAÇA", "FRUTA"],
     ["AMEIXA", "FRUTA"],
     ["JABUTICABA", "FRUTA"],
+    ["JAMBO", "FRUTA"],
+    ["FIGO", "FRUTA"],
+    ["AMORA", "FRUTA"],
+    ["CEREJA", "FRUTA"],
 
     ["INSTAGRAM", "INTERNET"],
     ["FACEBOOK", "INTERNET"],
