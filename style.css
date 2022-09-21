@@ -21,6 +21,15 @@ body {
     height: 100%;
     box-sizing: border-box;
 }
+.dica {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px auto;
+
+    visibility: hidden;
+}
 
 .forca {
     width: 50%;
@@ -98,7 +107,8 @@ body {
     cursor: pointer;
 }
 
-#popup, #popupAddPalavra {
+/* popup ganhou/perdeu */
+#popup{
     width: 30%;
     height: 50%;
     position: absolute;
@@ -122,7 +132,40 @@ body {
     margin: auto 0;
     padding: 5px;
 }
+/* popup adicionar palavra */
+#popupAddPalavra {
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    right: 50%;
+    text-align: center;
+    border-radius: 15px;
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
 
+    display: flex;
+    flex-direction: column;
+
+    display: none;
+}
+
+#popupAddPalavra div {
+    margin: auto 0;
+}
+
+#popupAddPalavra div input {
+    width: 90%;
+    height: 25px;
+    margin: 5px 0;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+}
+
+/*os dois popups*/
 #popup div img , #popupAddPalavra div img{
     width: 40%;
 }
@@ -139,18 +182,6 @@ body {
     padding: 5px 10px;
     border: 2px solid darkgray;
     border-radius: 5px;
-}
-
-#popupAddPalavra div {
-    margin: auto 0;
-}
-
-#popupAddPalavra div input {
-    width: 90%;
-    height: 25px;
-    margin-top: 10px;
-    border: 2px solid darkgray;
-    border-radius: 10px;
 }
 
 .rodape {
@@ -182,6 +213,10 @@ body {
 }
 
 @media screen and (max-width: 780px) {
+    .dica {
+        font-size: 18px;
+    }
+
     #imagem-forca {
         width: 50%;
         margin-bottom: 10px;
@@ -193,11 +228,15 @@ body {
 
     #popupAddPalavra {
         width: 40%;
-        height: 62%;
+        height: 70%;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .dica {
+        font-size: 18px;
+    }
+
     #imagem-forca {
         width: 65%;
         margin-bottom: 10px;
@@ -207,9 +246,17 @@ body {
         width: 100%;
     }
 
-    #popup, #popupAddPalavra {
+    #popup {
         width: 50%;
         height: 60%;
+        top: 20%;
+        left: 25%;
+        right: 20%;
+    }
+
+    #popupAddPalavra {
+        width: 50%;
+        height: 70%;
         top: 20%;
         left: 25%;
         right: 20%;
@@ -221,6 +268,10 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+    .dica {
+        font-size: 15px;
+    }
+
     #popup {
         width: 60%;
         height: 50%;
@@ -239,7 +290,7 @@ body {
 
     #popupAddPalavra {
         width: 70%;
-        height: 60%;
+        height: 70%;
         top: 20%;
         left: 10%;
         right: 15%;
@@ -266,6 +317,10 @@ body {
 }
 
 @media screen and (max-width: 380px) {
+    .dica {
+        font-size: 15px;
+    }
+
     #imagem-forca {
         width: 100%;
         margin-bottom: 10px;
@@ -320,7 +375,7 @@ body {
 
     #popupAddPalavra {
         width: 70%;
-        height: 60%;
+        height: 70%;
         top: 20%;
         left: 15%;
         right: 20%;
@@ -347,6 +402,10 @@ body {
 }
 
 @media screen and (max-width: 280px) {
+    .dica {
+        font-size: 15px;
+    }
+
     #imagem-forca {
         width: 80%;
         margin-bottom: 10px;
