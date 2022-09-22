@@ -112,7 +112,7 @@ body {
     width: 30%;
     height: 50%;
     position: absolute;
-    top: 20%;
+    top: 12%;
     left: 35%;
     right: 50%;
     text-align: center;
@@ -229,6 +229,9 @@ body {
     #popupAddPalavra {
         width: 40%;
         height: 70%;
+        left: 30%;
+        right: 30%;
+        
     }
 }
 
@@ -249,17 +252,17 @@ body {
     #popup {
         width: 50%;
         height: 60%;
-        top: 20%;
+        top: 15%;
         left: 25%;
-        right: 20%;
+        right: 25%;
     }
 
     #popupAddPalavra {
         width: 50%;
         height: 70%;
-        top: 20%;
+        top: 10%;
         left: 25%;
-        right: 20%;
+        right: 25%;
     }
 
     #popup p, #popup button {
@@ -275,9 +278,9 @@ body {
     #popup {
         width: 60%;
         height: 50%;
-        top: 20%;
-        left: 15%;
-        right: 15%;
+        top: 15%;
+        left: 20%;
+        right: 20%;
     }
 
     #popup img, #popupAddPalavra img {
@@ -291,8 +294,8 @@ body {
     #popupAddPalavra {
         width: 70%;
         height: 70%;
-        top: 20%;
-        left: 10%;
+        top: 10%;
+        left: 15%;
         right: 15%;
     }
 
@@ -376,9 +379,9 @@ body {
     #popupAddPalavra {
         width: 70%;
         height: 70%;
-        top: 20%;
+        top: 10%;
         left: 15%;
-        right: 20%;
+        right: 15%;
     }
 
     .rodape {
@@ -454,7 +457,7 @@ body {
     }
 
     #popup{
-        width: 60%;
+        width: 70%;
         height: 40%;
         top: 20%;
         left: 15%;
@@ -467,7 +470,7 @@ body {
 
     #popupAddPalavra {
         width: 80%;
-        top: 20%;
+        top: 10%;
         left: 10%;
         right: 15%;
     }
