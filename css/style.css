@@ -3,6 +3,10 @@ body {
     background: url('../img/fundo.jpg');
 }
 
-
+@media screen and (min-width: 992px) {
+    main {
+        height: 100vh;
+    }
+}
 
 
