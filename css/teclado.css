@@ -1,0 +1,40 @@
+#sessao-teclado {
+    display: none;
+    margin-top: 30px;
+}
+
+.teclado {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.teclado button {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    margin: 2px 0;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+}
+
+/*colocar isso no responsivo*/
+
+
+@media screen and (min-width: 768px) {
+    .teclado {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .teclado {
+        width: 35%;
+    }
+    .teclado button:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

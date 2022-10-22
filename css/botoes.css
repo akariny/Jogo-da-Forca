@@ -1,0 +1,42 @@
+.botoes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.botoes button {
+    border: none;
+    border-radius: 5px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    margin: 8px auto;
+    padding: 5px 10px;
+    width: 80%;
+}
+
+/*add no responsivo*/
+.botoes button:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2rem auto;
+        width: 50%;
+    }
+
+    .botoes button {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .botoes {
+        width: 30%;
+    }
+}

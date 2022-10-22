@@ -1,0 +1,35 @@
+.sessao-forca {
+    box-sizing: border-box;
+}
+.dica {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px auto;
+
+    visibility: hidden;
+}
+
+.forca {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+#imagem-forca {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    #imagem-forca {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #imagem-forca {
+        width: 40%;
+    }
+}

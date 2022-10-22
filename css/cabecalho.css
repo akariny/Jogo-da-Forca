@@ -1,0 +1,13 @@
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    justify-content: flex-start;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.logo {
+    height: 35px;
+    padding-left: 2%;
+}

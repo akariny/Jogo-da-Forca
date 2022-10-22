@@ -4,12 +4,20 @@
         <title>Jogo da Forca</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="reset.css">
-        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cabecalho.css">
+        <link rel="stylesheet" href="css/forca.css">
+        <link rel="stylesheet" href="css/palavraJogo.css">
+        <link rel="stylesheet" href="css/teclado.css">
+        <link rel="stylesheet" href="css/botoes.css">
+        <link rel="stylesheet" href="css/rodape.css">
+        <link rel="stylesheet" href="css/popup.css">
+        <link rel="stylesheet" href="css/popupAddPalavra.css">
     </head>
     
     <body>
@@ -34,39 +42,36 @@
 
             <section id="sessao-teclado">
                 <div class="teclado">
-                    <div class="teclado-linha1">
-                        <button id="Q" class="botao-teclado" onclick="clicaLetra('Q');">Q</button>
-                        <button id="W" class="botao-teclado" onclick="clicaLetra('W');">W</button>
-                        <button id="E" class="botao-teclado" onclick="clicaLetra('E');">E</button>
-                        <button id="R" class="botao-teclado" onclick="clicaLetra('R');">R</button>
-                        <button id="T" class="botao-teclado" onclick="clicaLetra('T');">T</button>
-                        <button id="Y" class="botao-teclado" onclick="clicaLetra('Y');">Y</button>
-                        <button id="U" class="botao-teclado" onclick="clicaLetra('U');">U</button>
-                        <button id="I" class="botao-teclado" onclick="clicaLetra('I');">I</button>
-                        <button id="O" class="botao-teclado" onclick="clicaLetra('O');">O</button>
-                        <button id="P" class="botao-teclado" onclick="clicaLetra('P');">P</button>    
-                    </div> 
-                    <div class="teclado-linha2">
+                    
                         <button id="A" class="botao-teclado" onclick="clicaLetra('A');">A</button>
-                        <button id="S" class="botao-teclado" onclick="clicaLetra('S');">S</button>
+                        <button id="B" class="botao-teclado" onclick="clicaLetra('B');">B</button>
+                        <button id="C" class="botao-teclado" onclick="clicaLetra('C');">C</button>
                         <button id="D" class="botao-teclado" onclick="clicaLetra('D');">D</button>
+                        <button id="E" class="botao-teclado" onclick="clicaLetra('E');">E</button>
                         <button id="F" class="botao-teclado" onclick="clicaLetra('F');">F</button>
                         <button id="G" class="botao-teclado" onclick="clicaLetra('G');">G</button>
                         <button id="H" class="botao-teclado" onclick="clicaLetra('H');">H</button>
-                        <button id="J" class="botao-teclado" onclick="clicaLetra('J');">J</button>
+                        <button id="I" class="botao-teclado" onclick="clicaLetra('I');">I</button>
+                        <button id="J" class="botao-teclado" onclick="clicaLetra('J');">J</button>    
+                    
                         <button id="K" class="botao-teclado" onclick="clicaLetra('K');">K</button>
                         <button id="L" class="botao-teclado" onclick="clicaLetra('L');">L</button>
-                        <button id="Ç" class="botao-teclado" onclick="clicaLetra('Ç');">Ç</button>
-                    </div>
-                    <div class="teclado-linha3">
-                        <button id="Z" class="botao-teclado" onclick="clicaLetra('Z');">Z</button>
-                        <button id="X" class="botao-teclado" onclick="clicaLetra('X');">X</button>
-                        <button id="C" class="botao-teclado" onclick="clicaLetra('C');">C</button>
-                        <button id="V" class="botao-teclado" onclick="clicaLetra('V');">V</button>
-                        <button id="B" class="botao-teclado" onclick="clicaLetra('B');">B</button>
-                        <button id="N" class="botao-teclado" onclick="clicaLetra('N');">N</button>
                         <button id="M" class="botao-teclado" onclick="clicaLetra('M');">M</button>
-                    </div>   
+                        <button id="N" class="botao-teclado" onclick="clicaLetra('N');">N</button>
+                        <button id="O" class="botao-teclado" onclick="clicaLetra('O');">O</button>
+                        <button id="P" class="botao-teclado" onclick="clicaLetra('P');">P</button>
+                        <button id="Q" class="botao-teclado" onclick="clicaLetra('Q');">Q</button>
+                        <button id="R" class="botao-teclado" onclick="clicaLetra('R');">R</button>
+                        <button id="S" class="botao-teclado" onclick="clicaLetra('S');">S</button>
+                        <button id="T" class="botao-teclado" onclick="clicaLetra('T');">T</button>
+
+                        <button id="U" class="botao-teclado" onclick="clicaLetra('U');">U</button>
+                        <button id="V" class="botao-teclado" onclick="clicaLetra('V');">V</button>
+                        <button id="W" class="botao-teclado" onclick="clicaLetra('W');">W</button>
+                        <button id="X" class="botao-teclado" onclick="clicaLetra('X');">X</button>
+                        <button id="Y" class="botao-teclado" onclick="clicaLetra('Y');">Y</button>
+                        <button id="Z" class="botao-teclado" onclick="clicaLetra('Z');">Z</button>
+                        <button id="Ç" class="botao-teclado" onclick="clicaLetra('Ç');">Ç</button>
                 </div> 
             </section>
 
@@ -107,7 +112,7 @@
             <img src="img/badge.png" alt="Badge Desafio Jogo da Forca" class="badge">
         </footer>  
 
-        <script src="palavras.js"></script>
-        <script src="script.js"></script>
+        <script src="js/palavras.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

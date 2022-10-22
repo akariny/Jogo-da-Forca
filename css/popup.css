@@ -1,0 +1,51 @@
+#popup{
+    backdrop-filter: blur( 3px );
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    display: flex;
+    display: none;
+    flex-direction: column;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-backdrop-filter: blur( 3px );
+    width: 60%;
+}
+
+#popup div {
+    margin: auto 0;
+    padding: 5px;
+}
+
+#popup div img {
+    width: 40%;
+}
+
+#popup p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#popup button {
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+@media screen and (min-width: 768px) {
+    #popup {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #popup {
+        width: 25%;
+    } 
+}
